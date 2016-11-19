@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Goals</h1>
+
+<div class="timeline-centered">
+    <% @goals.each do |goal| %>
+
+     <article class="timeline-entry">
+
+            <div class="timeline-entry-inner">
+
+                <%= priorityIcon(goal.priority) %>
+                    <i class="entypo-feather"></i>
+                </div>
+
+                <div class="timeline-label">
+                    <h2><%= goal.title %> <span><%= goal.date %></span></h2>
+                    <p><% (Date.today +10) - Date.today %><%= goal.description %></p>
+                </div>
+            </div>
+        </article>
+    <% end %>
+
+        <article class="timeline-entry begin">
+
+            <div class="timeline-entry-inner">
+
+                <div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
+                    <i class="entypo-flight"></i> <%= link_to '+', new_goal_path %>
+                </div>
+
+            </div>
+
+        </article>
+
+</div>
+

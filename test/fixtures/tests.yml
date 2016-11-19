@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-11-14
+  title: MyString
+  duration: MyString
+  power: 1.5
+  speed: 1.5
+  distance: 1.5
+  sport: one
+
+two:
+  date: 2016-11-14
+  title: MyString
+  duration: MyString
+  power: 1.5
+  speed: 1.5
+  distance: 1.5
+  sport: two

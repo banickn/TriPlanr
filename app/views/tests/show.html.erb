@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @test.date %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @test.duration %>
+</p>
+
+<p>
+  <strong>Power:</strong>
+  <%= @test.power %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @test.speed %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @test.distance %>
+</p>
+
+<p>
+  <strong>Sport:</strong>
+  <%= @test.sport %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

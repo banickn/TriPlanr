@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  season_start: 2016-11-18
+  season_end: 2016-11-18
+
+two:
+  season_start: 2016-11-18
+  season_end: 2016-11-18

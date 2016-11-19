@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Season start:</strong>
+  <%= @setting.season_start %>
+</p>
+
+<p>
+  <strong>Season end:</strong>
+  <%= @setting.season_end %>
+</p>
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>
