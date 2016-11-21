@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Goals</h1>
-
+<hr />
 <div class="timeline-centered">
     <% @goals.each do |goal| %>
 
@@ -14,8 +14,8 @@
                 </div>
 
                 <div class="timeline-label">
-                    <h2><%= goal.title %> <span><%= goal.date %></span></h2>
-                    <p><% (Date.today +10) - Date.today %><%= goal.description %></p>
+                    <h2><%= goal.title %> <span>(<%= (goal.date - Date.today).to_i %> days to go)</span></h2>
+                    <p><%= goal.date %> <%= goal.description %></p>
                 </div>
             </div>
         </article>

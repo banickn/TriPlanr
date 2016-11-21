@@ -1,19 +1,21 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-1">
+<div class="panel panel-default">
+  <div class="panel-body">
 <%= simple_form_for @goal,
   html: { class: 'form-horizontal' },
   wrapper: :horizontal_form do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :date, as: :date, html5: true %>
+
+    <%= f.input :date, as: :date, html5: true, wrapper: :horizontal_form %>
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :priority %>
-  </div>
+    <%= f.input :priority, collection: ['A', 'B', 'C'] %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <%= f.button :submit, "Change settings", class: "btn btn-success btn-lg"%>
+
 <% end %>
+</div>
+</div>
 </div>
 </div>

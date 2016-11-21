@@ -1,5 +1,7 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-1">
+<div class="panel panel-default">
+  <div class="panel-body">
 <%= simple_form_for @setting,
   html: { class: 'form-horizontal' },
   wrapper: :horizontal_form,
@@ -9,11 +11,12 @@
 
 
 <%= f.error_notification %>
-<%= f.input :season_start, as: :date, html5: true %>
-<%= f.input :season_end, as: :date, html5: true %>
+<%= f.input :season_start, as: :date, html5: true, wrapper: :horizontal_form %>
+<%= f.input :season_end, as: :date, html5: true, wrapper: :horizontal_form %>
 <%= f.button :submit, "Change settings", class: "btn btn-success btn-lg"%>
 
 <% end %>
-
+</div>
+</div>
 </div>
 </div>

@@ -41,7 +41,23 @@
 
             <li><%= link_to(goals_path) do%><span class="glyphicon glyphicon-check"></span> Goals <% end %></li>
             <li><%= link_to(workouts_path) do%><span class="glyphicon glyphicon-calendar"></span> Calendar <% end %></li>
-            <li><a href="#"><span class="glyphicon glyphicon-signal"></span> PMC</a></li>
+            <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-lvl1">
+                    <span class="glyphicon glyphicon-signal"></span> PMC <span class="caret"></span>
+                </a>
+
+                <!-- Dropdown level 1 -->
+                <div id="dropdown-lvl1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                            <li><%= link_to(pmc_path) do%>Overall<% end %></li>
+                            <li><%= link_to(pmc_path) do%>Bike<% end %></li>
+                            <li><%= link_to(pmc_path) do%>Run<% end %></li>
+                            <li><%= link_to(pmc_path) do%>Swim<% end %></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
             <li><%= link_to(tsscalc_path) do%><span class="glyphicon glyphicon-dashboard"></span> TSS<% end %></li>
             <li><%= link_to(tests_path) do%><span class="glyphicon glyphicon-search"></span> Tests <% end %> </li>
             <li><a href="#"><span class="glyphicon glyphicon-stats"></span> ATP</a></li>

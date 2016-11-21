@@ -1,23 +1,8 @@
-<script>
-$(function () {
-  new Highcharts.Chart({
-    chart: { renderTo: 'orders_chart' },
-    title: { text: 'Bike tests' },
-    xAxis: { type: 'datetime' },
-    yAxis: {
-      title: { text: 'Power'}
-    },
-    series: [{
-      data: [<%= @data %>]
-    }]
-  });
-});
-</script>
 <p id="notice"><%= notice %></p>
 
 <h1>Tests</h1>
-
-<table>
+<hr />
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Date</th>
@@ -50,5 +35,5 @@ $(function () {
 </table>
 
 <br>
-<%= high_chart("some_id", @chart) %>
+
 <%= link_to 'New Test', new_test_path %>
