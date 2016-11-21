@@ -20,14 +20,3 @@
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
 //= require_tree .
-
-
-$(document).ready(function() {
-
-    // page is now ready, initialize the calendar...
-
-    $('#calendar').fullCalendar({
-        events: '/workouts.json'
-    })
-
-});
