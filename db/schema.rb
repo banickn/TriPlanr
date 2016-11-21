@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20161118120142) do
   create_table "tests", force: :cascade do |t|
     t.date     "date"
     t.string   "title"
-    t.string   "duration"
+    t.float    "duration"
     t.float    "power"
     t.float    "speed"
     t.float    "distance"
