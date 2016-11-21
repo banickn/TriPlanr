@@ -1,6 +1,13 @@
 class Pmc
   include ActiveModel::AttributeMethods
 
+    def initialize
+        @setting = Setting.find(1)
+        @seasonStart = @setting.season_start
+        @seasonEnd = @setting.season_end
+        @seasonDuration = (@seasonEnd - @seasonStart).to_i
+    end
+
     def calcATL(day, offset, period)
         day = Workout.find_by date: day
         expFactor = Math.exp(-1.0/period)
@@ -20,14 +27,15 @@ class Pmc
         end
         return @tsbArray
     end
+
     def calcPMCValues(period)
         $i = 0
         @pmcArray = Array.new(20)
-        while $i < 20  do
+        while $i < @seasonDuration do
             if $i == 0
-                @pmcArray[$i] = calcATL((Date.today + $i), 20, period)
+                @pmcArray[$i] = calcATL((@seasonStart + $i), 20, period)
             else
-                @pmcArray[$i] = calcATL((Date.today + $i), @pmcArray[$i - 1], period)
+                @pmcArray[$i] = calcATL((@seasonStart + $i), @pmcArray[$i - 1], period)
             end
             $i +=1;
         end
