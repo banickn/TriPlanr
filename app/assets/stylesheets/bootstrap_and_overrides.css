@@ -65,6 +65,10 @@
     border-right: 1px solid #e7e7e7;
 }*/
 
+hr {
+  margin-top: 12px;
+  border-top: 1px solid #cecece;
+}
 .side-menu {
   position: fixed;
   width: 300px;
@@ -572,7 +576,7 @@ img {
 
             .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
                 background: #fff;
-                color: #737881;
+                color: #4b4f54;
                 display: block;
                 width: 40px;
                 height: 40px;
@@ -650,9 +654,9 @@ img {
                 }
 
                 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2, .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
-                    color: #737881;
-                    font-family: "Noto Sans",sans-serif;
-                    font-size: 12px;
+                    color: #4b4f54;;
+                    /*font-family: "Noto Sans",sans-serif; */
+                    font-size: 14px;
                     margin: 0;
                     line-height: 1.428571429;
                 }
@@ -662,7 +666,7 @@ img {
                     }
 
                 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
-                    font-size: 16px;
+                    font-size: 22px;
                     margin-bottom: 10px;
                 }
 
