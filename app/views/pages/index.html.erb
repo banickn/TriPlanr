@@ -1,65 +1,68 @@
 <h1>TSS</h1>
 <hr />
+
 <div class="row">
-    <div class="col-md-9">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Weight</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputWeight" placeholder="kg">
-          </div>
+  <div class="col-md-9">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Weight</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputWeight" placeholder="kg">
+        </div>
       </div>
       <div class="form-group">
         <label for="inputPassword3" class="col-sm-2 control-label">20min Power</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="inputPower" placeholder="W">
+        </div>
       </div>
-  </div>
-  <div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">Duration</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputDuration" placeholder="h">
-  </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Duration</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputDuration" placeholder="h">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">IF</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputIntensity">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" class="btn btn-default" id="calcTss">Calculate</button>
+        </div>
+      </div>
+    </form>
 </div>
-<div class="form-group">
-    <label for="inputEmail3" class="col-sm-2 control-label">IF</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputIntensity">
-  </div>
-</div>
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="button" class="btn btn-default" id="calcTss">Calculate</button>
-  </div>
-</div>
-</form>
-</div>
-<div class="row">
 
-<div class="col-md-6 col-md-offset-1">
-        <table class="table table-striped"> 
-            <thead>
-             <tr>
-                 <th>Metric</th>
-                 <th>Value</th>
-             </tr> 
-         </thead>
-         <tbody>
-            <tr> 
-                <td scope="row">FTP</td>
-                <th id="ftp"></th>
-            </tr>
-            <tr>
-               <td scope="row">w/kg</td>
-               <th id="wkg"></th>
-           </tr>
-           <tr> <td scope="row">NP</td>
-                <th id="normalized"></th>
-           </tr>
-           <tr> <td scope="row">IM TSS</td>
-                <th id="imtss"></th>
-           </tr>
-       </tbody> 
-   </table>
-</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-striped"> 
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr> 
+        </thead>
+        <tbody>
+        <tr> 
+          <td scope="row">FTP</td>
+          <th id="ftp"></th>
+        </tr>
+        <tr>
+         <td scope="row">w/kg</td>
+         <th id="wkg"></th>
+        </tr>
+        <tr>
+          <td scope="row">NP</td>
+          <th id="normalized"></th>
+        </tr>
+        <tr> 
+          <td scope="row">IM TSS</td>
+          <th id="imtss"></th>
+        </tr>
+        </tbody> 
+      </table>
+    </div>
 </div>
