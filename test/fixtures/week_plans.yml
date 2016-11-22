@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  macro_period: MyString
+  meso_period: MyString
+  load_time: 1.5
+  load_atl: 1
+  load_ctl: 1
+  camp: 
+
+two:
+  macro_period: MyString
+  meso_period: MyString
+  load_time: 1.5
+  load_atl: 1
+  load_ctl: 1
+  camp: 

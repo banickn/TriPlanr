@@ -58,6 +58,6 @@ class SettingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def setting_params
-      params.require(:setting).permit(:season_start, :season_end)
+      params.require(:setting).permit(:season_start, :season_end, :goal_ctl_bike_max, :goal_ctl_bike_min, :goal_ctl_run_max, :goal_ctl_run_min)
     end
 end

@@ -4,7 +4,6 @@ jQuery ->
         power = $('#inputPower').val()
         duration = $('#inputDuration').val()
         intensity = $('#inputIntensity').val()
-
         ftp = Math.round(power * 0.95)
         $('#ftp').html(ftp)
 
@@ -17,8 +16,6 @@ jQuery ->
         imtss = Math.round(((duration* 3600 * normalized * intensity) / (ftp * 3600)) * 100)
         $('#imtss').html(imtss)
 
-        $('.slider').slider()
-        
         if imtss < 270
             $('#imtss').css('color', '#3498db')
         else if (imtss > 270 && imtss < 280)

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :week_plans
   resources :settings
   resources :tests
   resources :goals

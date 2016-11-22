@@ -30,7 +30,7 @@ class Pmc
 
     def calcPMCValues(period)
         $i = 0
-        @pmcArray = Array.new(20)
+        @pmcArray = Array.new(@seasonDuration)
         while $i < @seasonDuration do
             if $i == 0
                 @pmcArray[$i] = calcATL((@seasonStart + $i), 20, period)

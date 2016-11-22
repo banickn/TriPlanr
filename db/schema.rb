@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118120142) do
+ActiveRecord::Schema.define(version: 20161122060301) do
 
   create_table "goals", force: :cascade do |t|
     t.date     "date"
@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 20161118120142) do
   create_table "settings", force: :cascade do |t|
     t.date     "season_start"
     t.date     "season_end"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "goal_ctl_bike_min"
+    t.integer  "goal_ctl_bike_max"
+    t.integer  "goal_ctl_run_min"
+    t.integer  "goal_ctl_run_max"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "sports", force: :cascade do |t|
@@ -45,6 +49,17 @@ ActiveRecord::Schema.define(version: 20161118120142) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sport_id"], name: "index_tests_on_sport_id"
+  end
+
+  create_table "week_plans", force: :cascade do |t|
+    t.string   "macro_period"
+    t.string   "meso_period"
+    t.float    "load_time"
+    t.integer  "load_atl"
+    t.integer  "load_ctl"
+    t.boolean  "camp"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "workouts", force: :cascade do |t|
