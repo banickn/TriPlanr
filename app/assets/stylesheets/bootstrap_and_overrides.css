@@ -69,6 +69,9 @@ hr {
   margin-top: 12px;
   border-top: 1px solid #cecece;
 }
+.logo {
+  padding: 10px;
+}
 .side-menu {
   position: fixed;
   width: 300px;
@@ -208,6 +211,7 @@ hr {
   }
   .side-menu .brand-name-wrapper .navbar-brand {
     display: inline-block;
+    font-size: 14px;
   }
   /* Slide in animation */
   @-moz-keyframes slidein {
