@@ -3,12 +3,15 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :type %>
+    <%= f.input :kind %>
     <%= f.input :goal_ctl_bike %>
     <%= f.input :goal_ctl_run %>
     <%= f.input :goal_ctl_swim %>
     <%= f.input :year_position %>
     <%= f.association :periodization_year %>
+    <%= f.simple_fields_for :periodization_weeks do |f| %>
+      <%= f.input :title %>
+    <% end %>
   </div>
 
   <div class="form-actions">

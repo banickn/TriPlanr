@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20161123144919) do
 
   create_table "periodization_cycles", force: :cascade do |t|
     t.string   "title"
-    t.string   "type"
+    t.string   "kind"
     t.float    "goal_ctl_bike"
     t.float    "goal_ctl_run"
     t.float    "goal_ctl_swim"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20161123144919) do
 
   create_table "periodization_weeks", force: :cascade do |t|
     t.string   "title"
-    t.string   "type"
+    t.string   "kind"
     t.float    "goal_ctl_bike"
     t.float    "goal_ctl_run"
     t.float    "goal_ctl_swim"

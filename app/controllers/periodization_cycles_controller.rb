@@ -1,28 +1,21 @@
 class PeriodizationCyclesController < ApplicationController
   before_action :set_periodization_cycle, only: [:show, :edit, :update, :destroy]
 
-  # GET /periodization_cycles
-  # GET /periodization_cycles.json
   def index
     @periodization_cycles = PeriodizationCycle.all
   end
 
-  # GET /periodization_cycles/1
-  # GET /periodization_cycles/1.json
   def show
   end
 
-  # GET /periodization_cycles/new
   def new
     @periodization_cycle = PeriodizationCycle.new
+    @periodization_cycle.periodization_weeks.build
   end
 
-  # GET /periodization_cycles/1/edit
   def edit
   end
 
-  # POST /periodization_cycles
-  # POST /periodization_cycles.json
   def create
     @periodization_cycle = PeriodizationCycle.new(periodization_cycle_params)
 
@@ -37,8 +30,6 @@ class PeriodizationCyclesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /periodization_cycles/1
-  # PATCH/PUT /periodization_cycles/1.json
   def update
     respond_to do |format|
       if @periodization_cycle.update(periodization_cycle_params)
@@ -51,8 +42,6 @@ class PeriodizationCyclesController < ApplicationController
     end
   end
 
-  # DELETE /periodization_cycles/1
-  # DELETE /periodization_cycles/1.json
   def destroy
     @periodization_cycle.destroy
     respond_to do |format|
