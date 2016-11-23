@@ -1,0 +1,1 @@
+json.array! @periodization_weeks, partial: 'periodization_weeks/periodization_week', as: :periodization_week

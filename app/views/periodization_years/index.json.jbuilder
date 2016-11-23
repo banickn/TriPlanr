@@ -1,0 +1,1 @@
+json.array! @periodization_years, partial: 'periodization_years/periodization_year', as: :periodization_year

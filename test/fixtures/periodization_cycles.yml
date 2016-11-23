@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  type: 
+  goal_ctl_bike: 1.5
+  goal_ctl_run: 1.5
+  goal_ctl_swim: 1.5
+  atp_position: 1
+  atp: one
+
+two:
+  title: MyString
+  type: 
+  goal_ctl_bike: 1.5
+  goal_ctl_run: 1.5
+  goal_ctl_swim: 1.5
+  atp_position: 1
+  atp: two

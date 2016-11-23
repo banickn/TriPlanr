@@ -1,0 +1,17 @@
+<%= simple_form_for(@periodization_cycle) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :type %>
+    <%= f.input :goal_ctl_bike %>
+    <%= f.input :goal_ctl_run %>
+    <%= f.input :goal_ctl_swim %>
+    <%= f.input :year_position %>
+    <%= f.association :periodization_year %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

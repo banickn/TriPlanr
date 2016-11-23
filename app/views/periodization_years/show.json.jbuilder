@@ -1,0 +1,1 @@
+json.partial! "periodization_years/periodization_year", periodization_year: @periodization_year

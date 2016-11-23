@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @periodization_week.title %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @periodization_week.type %>
+</p>
+
+<p>
+  <strong>Goal ctl bike:</strong>
+  <%= @periodization_week.goal_ctl_bike %>
+</p>
+
+<p>
+  <strong>Goal ctl run:</strong>
+  <%= @periodization_week.goal_ctl_run %>
+</p>
+
+<p>
+  <strong>Goal ctl swim:</strong>
+  <%= @periodization_week.goal_ctl_swim %>
+</p>
+
+<p>
+  <strong>Cycle position:</strong>
+  <%= @periodization_week.cycle_position %>
+</p>
+
+<p>
+  <strong>Periodization cycle:</strong>
+  <%= @periodization_week.periodization_cycle %>
+</p>
+
+<%= link_to 'Edit', edit_periodization_week_path(@periodization_week) %> |
+<%= link_to 'Back', periodization_weeks_path %>

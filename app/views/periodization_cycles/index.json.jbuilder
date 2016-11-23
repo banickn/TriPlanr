@@ -1,0 +1,1 @@
+json.array! @periodization_cycles, partial: 'periodization_cycles/periodization_cycle', as: :periodization_cycle

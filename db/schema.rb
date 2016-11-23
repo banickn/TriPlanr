@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161122060301) do
+ActiveRecord::Schema.define(version: 20161123144919) do
 
   create_table "goals", force: :cascade do |t|
     t.date     "date"
@@ -19,6 +19,38 @@ ActiveRecord::Schema.define(version: 20161122060301) do
     t.string   "priority"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "periodization_cycles", force: :cascade do |t|
+    t.string   "title"
+    t.string   "type"
+    t.float    "goal_ctl_bike"
+    t.float    "goal_ctl_run"
+    t.float    "goal_ctl_swim"
+    t.integer  "year_position"
+    t.integer  "periodization_year_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["periodization_year_id"], name: "index_periodization_cycles_on_periodization_year_id"
+  end
+
+  create_table "periodization_weeks", force: :cascade do |t|
+    t.string   "title"
+    t.string   "type"
+    t.float    "goal_ctl_bike"
+    t.float    "goal_ctl_run"
+    t.float    "goal_ctl_swim"
+    t.integer  "cycle_position"
+    t.integer  "periodization_cycle_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["periodization_cycle_id"], name: "index_periodization_weeks_on_periodization_cycle_id"
+  end
+
+  create_table "periodization_years", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "settings", force: :cascade do |t|
@@ -49,17 +81,6 @@ ActiveRecord::Schema.define(version: 20161122060301) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["sport_id"], name: "index_tests_on_sport_id"
-  end
-
-  create_table "week_plans", force: :cascade do |t|
-    t.string   "macro_period"
-    t.string   "meso_period"
-    t.float    "load_time"
-    t.integer  "load_atl"
-    t.integer  "load_ctl"
-    t.boolean  "camp"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
   end
 
   create_table "workouts", force: :cascade do |t|

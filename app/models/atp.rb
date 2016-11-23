@@ -1,5 +1,5 @@
-class Atp
-  include ActiveModel::AttributeMethods
+class Atp < ApplicationRecord
+    has_many :PeriodizationCycles
 
     def initialize
         @setting = Setting.find(1)
@@ -14,7 +14,7 @@ class Atp
         $i = 0
         @atpHash = Hash.new
         @ctlBikeRamp = (@goalCtlBikeMax - 20.0) / @seasonDurationWeeks
-        @periodizedBikeRamp = @ctlBikeRamp + @ctlBikeRamp / 2
+        @periodizedBikeRamp = @ctlBikeRamp * 2
         print @ctlBikeRamp.round(2)
         print @periodizedBikeRamp.round(2)
         while $i < @seasonDurationWeeks do
@@ -29,6 +29,6 @@ class Atp
             end
             $i +=1;
         end
-        return @atpHash
+        return @atpHash.to_a
     end
 end

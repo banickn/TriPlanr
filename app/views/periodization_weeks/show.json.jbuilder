@@ -1,0 +1,1 @@
+json.partial! "periodization_weeks/periodization_week", periodization_week: @periodization_week

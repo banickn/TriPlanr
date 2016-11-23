@@ -1,0 +1,1 @@
+json.partial! "periodization_cycles/periodization_cycle", periodization_cycle: @periodization_cycle

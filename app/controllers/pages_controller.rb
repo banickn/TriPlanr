@@ -19,4 +19,19 @@ class PagesController < ApplicationController
       f.series(:type=> 'column',:name=> 'TSB', :color=> '#ffff00', :data=> @p.calcTSB(@atl,@ctl) )
     end
   end
+
+  def atp
+    @atp = Atp.new
+    @atp = @atp.calcATP()
+    @chart = LazyHighCharts::HighChart.new('graph') do |f|
+      f.title({ :text=>"ATP"})
+      f.plot_options(:line=>{
+        :allowPointSelect=>true, 
+        :cursor=>"pointer" ,
+        :marker=>{
+          :enabled=>false
+      }})
+      f.series(:type=> 'column',:name=> 'CTL', :color=> '#0477f9', :data=> @atp )
+    end
+  end
 end

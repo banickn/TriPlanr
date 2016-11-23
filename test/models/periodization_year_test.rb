@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WeekPlanTest < ActiveSupport::TestCase
+class PeriodizationYearTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

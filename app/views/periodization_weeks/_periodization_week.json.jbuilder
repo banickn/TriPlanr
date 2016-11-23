@@ -1,0 +1,2 @@
+json.extract! periodization_week, :id, :title, :type, :goal_ctl_bike, :goal_ctl_run, :goal_ctl_swim, :cycle_position, :periodization_cycle_id, :created_at, :updated_at
+json.url periodization_week_url(periodization_week, format: :json)

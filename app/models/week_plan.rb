@@ -1,3 +1,0 @@
-class WeekPlan < ApplicationRecord
-
-end
