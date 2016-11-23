@@ -1,1 +1,0 @@
-json.partial! "week_plans/week_plan", week_plan: @week_plan

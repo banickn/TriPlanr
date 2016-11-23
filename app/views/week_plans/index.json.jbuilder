@@ -1,1 +1,0 @@
-json.array! @week_plans, partial: 'week_plans/week_plan', as: :week_plan
