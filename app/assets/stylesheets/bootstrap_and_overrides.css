@@ -5,7 +5,12 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/sprites
   */
-
+.glyphicon {
+  color: #F54A4ACC;
+}
+h1 {
+  font-size: 26px;
+}
 .btn {
         border-radius:0px;
           outline: none !important;
@@ -26,6 +31,13 @@
   border-bottom-left-radius: 0px;
 }
 
+.nested-fields {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  padding: 8px;
+  margin: 14px;
+}
 .pagination>li:last-child>a, .pagination>li:last-child>span {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -72,11 +84,14 @@ hr {
 .logo {
   padding: 10px;
 }
+.navbar-default {
+  background-color: #363636;
+}
 .side-menu {
   position: fixed;
   width: 300px;
   height: 100%;
-  background-color: #f8f8f8;
+  background-color: #434343;
   border-right: 1px solid #e7e7e7;
 }
 .side-menu .navbar {
@@ -84,7 +99,7 @@ hr {
 }
 .side-menu .navbar-header {
   width: 100%;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #5f5f5f;
 }
 .side-menu .navbar-nav .active a {
   background-color: transparent;
@@ -94,10 +109,13 @@ hr {
 .side-menu .navbar-nav li {
   display: block;
   width: 100%;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #5F5F5F;
 }
 .side-menu .navbar-nav li a {
   padding: 15px;
+}
+.side-menu .navbar-nav li a:hover, a:active, a:visited {
+  color: #c2c2c2;
 }
 .side-menu .navbar-nav li a .glyphicon {
   padding-right: 10px;
@@ -117,18 +135,18 @@ hr {
   float: right;
 }
 .side-menu #dropdown > a {
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #5F5F5F;
 }
 .side-menu #dropdown .panel-body {
   padding: 0;
-  background-color: #f3f3f3;
+  background-color: #434343;
 }
 .side-menu #dropdown .panel-body .navbar-nav {
   width: 100%;
 }
 .side-menu #dropdown .panel-body .navbar-nav li {
   padding-left: 15px;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #5F5F5F;
 }
 .side-menu #dropdown .panel-body .navbar-nav li:last-child {
   border-bottom: none;
@@ -144,7 +162,7 @@ hr {
   padding-left: 30px;
 }
 .side-menu #dropdown .panel-body .panel-body li:last-child {
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #5F5F5F;
 }
 .side-menu #search-trigger {
   background-color: #f3f3f3;
