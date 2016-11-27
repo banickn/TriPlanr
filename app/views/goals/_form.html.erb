@@ -6,7 +6,7 @@
                 html: { class: 'form-horizontal' },
                 wrapper: :horizontal_form do |f| %>
 
-                <%= f.input :date, as: :date, html5: true, wrapper: :horizontal_form %>
+                <%= f.input :date, as: :string, wrapper: :horizontal_form %>
                 <%= f.input :title %>
                 <%= f.input :description %>
                 <%= f.input :priority, collection: ['A', 'B', 'C'] %>

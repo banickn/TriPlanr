@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :periodization_years
+  resources :periodization_years do
+    get 'calcATP', on: :member
+  end
   resources :periodization_weeks
   resources :periodization_cycles
   resources :settings

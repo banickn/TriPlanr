@@ -20,12 +20,12 @@
     <% @periodization_cycles.each do |periodization_cycle| %>
       <tr>
         <td><%= periodization_cycle.title %></td>
-        <td><%= periodization_cycle.type %></td>
+        <td><%= periodization_cycle.kind %></td>
         <td><%= periodization_cycle.goal_ctl_bike %></td>
         <td><%= periodization_cycle.goal_ctl_run %></td>
         <td><%= periodization_cycle.goal_ctl_swim %></td>
-        <td><%= periodization_cycle.atp_position %></td>
-        <td><%= periodization_cycle.atp %></td>
+        <td><%= periodization_cycle.year_position %></td>
+        <td><%= periodization_cycle.periodization_year %></td>
         <td><%= link_to 'Show', periodization_cycle %></td>
         <td><%= link_to 'Edit', edit_periodization_cycle_path(periodization_cycle) %></td>
         <td><%= link_to 'Destroy', periodization_cycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>

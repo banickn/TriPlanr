@@ -1,11 +1,23 @@
-<%= simple_form_for(@periodization_year) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <%= simple_form_for @periodization_year,
+              html: { class: 'form-horizontal' },
+              wrapper: :horizontal_form do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-  </div>
+              <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+              <%= f.input :title %>
+              <%= f.input :goal_ctl_bike %>
+              <%= f.input :goal_ctl_run %>
+              <%= f.input :goal_ctl_swim %>
+              <%= f.input :season_start, as: :string, wrapper: :horizontal_form %>
+              <%= f.input :season_end, as: :string, wrapper: :horizontal_form %>
+
+              <%= f.button :submit, "Create season", class: "btn btn-success btn-lg"%>
+              <% end %>
+            </div>
+        </div>
+    </div>
+</div>

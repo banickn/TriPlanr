@@ -7,7 +7,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @periodization_cycle.type %>
+  <%= @periodization_cycle.kind %>
 </p>
 
 <p>
@@ -27,12 +27,12 @@
 
 <p>
   <strong>Atp position:</strong>
-  <%= @periodization_cycle.atp_position %>
+  <%= @periodization_cycle.year_position %>
 </p>
 
 <p>
   <strong>Atp:</strong>
-  <%= @periodization_cycle.atp %>
+  <%= @periodization_cycle.periodization_year %>
 </p>
 
 <%= link_to 'Edit', edit_periodization_cycle_path(@periodization_cycle) %> |

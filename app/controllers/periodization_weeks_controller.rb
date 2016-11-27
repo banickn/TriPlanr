@@ -69,6 +69,6 @@ class PeriodizationWeeksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def periodization_week_params
-      params.require(:periodization_week).permit(:title, :type, :goal_ctl_bike, :goal_ctl_run, :goal_ctl_swim, :cycle_position, :periodization_cycle_id)
+      params.require(:periodization_week).permit(:title, :kind, :goal_ctl_bike, :goal_ctl_run, :goal_ctl_swim, :cycle_position, :periodization_cycle_id)
     end
 end

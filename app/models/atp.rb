@@ -1,5 +1,4 @@
 class Atp < ApplicationRecord
-    has_many :PeriodizationCycles
 
     def initialize
         @setting = Setting.find(1)

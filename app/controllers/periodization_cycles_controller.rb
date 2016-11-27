@@ -14,6 +14,7 @@ class PeriodizationCyclesController < ApplicationController
   end
 
   def edit
+    @periodization_cycle.periodization_weeks.build
   end
 
   def create
@@ -58,6 +59,9 @@ class PeriodizationCyclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def periodization_cycle_params
-      params.require(:periodization_cycle).permit(:title, :type, :goal_ctl_bike, :goal_ctl_run, :goal_ctl_swim, :atp_position, :atp_id)
+      params.require(:periodization_cycle).permit(:title, :kind, :goal_ctl_bike, :goal_ctl_run,
+                                                  :goal_ctl_swim, :year_position, :periodization_year_id,
+                                                   periodization_weeks_attributes:
+                                                  [:id, :title, :kind, :cycle_position, :_destroy])
     end
 end

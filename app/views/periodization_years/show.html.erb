@@ -3,7 +3,18 @@
 <p>
   <strong>Title:</strong>
   <%= @periodization_year.title %>
+  <br />
+  <%= @seasonDurationWeeks %> Weeks 
 </p>
-
+<ul>
+    <% @periodization_year.periodization_cycles.each do |cycle| %>
+      <li><%= cycle.title %></li>
+      <ul>
+        <% cycle.periodization_weeks.each do |week| %>
+        <li><%= week.title %></li>
+        <% end %>
+        </ul>
+    <% end %>
+    </ul>
 <%= link_to 'Edit', edit_periodization_year_path(@periodization_year) %> |
 <%= link_to 'Back', periodization_years_path %>

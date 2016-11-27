@@ -7,12 +7,7 @@
                 wrapper: :horizontal_form do |f| %>
 
                 <%= f.error_notification %>
-                <%= f.input :season_start, as: :date, html5: true, wrapper: :horizontal_form %>
-                <%= f.input :season_end, as: :date, html5: true, wrapper: :horizontal_form %>
-                <%= f.input :goal_ctl_bike_max %>
-                <%= f.input :goal_ctl_bike_min %>
-                <%= f.input :goal_ctl_run_max %>
-                <%= f.input :goal_ctl_run_min %>
+
                 <%= f.button :submit, "Change settings", class: "btn btn-success btn-lg"%>
                 <% end %>
             </div>

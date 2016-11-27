@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @year.title %>
+  <br />
+  <%= @seasonDurationWeeks %> Cycles (<%= @year.season_end %>)
+</p>
+<ul>
+  <% @year.periodization_cycles.each do |cycle| %>
+  <li><%= cycle.title %></li>
+  <ul>
+    <% cycle.periodization_weeks.each do |week| %>
+    <li><%= week.title %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</ul>
+
