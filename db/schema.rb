@@ -49,19 +49,20 @@ ActiveRecord::Schema.define(version: 20161123144919) do
 
   create_table "periodization_years", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.date     "season_start"
+    t.date     "season_end"
+    t.integer  "goal_ctl_bike"
+    t.integer  "goal_ctl_run"
+    t.integer  "goal_ctl_swim"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "settings", force: :cascade do |t|
-    t.date     "season_start"
-    t.date     "season_end"
-    t.integer  "goal_ctl_bike_min"
-    t.integer  "goal_ctl_bike_max"
-    t.integer  "goal_ctl_run_min"
-    t.integer  "goal_ctl_run_max"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.integer  "weight"
+    t.integer  "ftp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sports", force: :cascade do |t|
