@@ -1,4 +1,7 @@
 jQuery ->
+    $('#setting_season_start').datepicker({dateFormat: 'D, dd M yy'})
+    $('#setting_season_end').datepicker({dateFormat: 'D, dd M yy'})
+
     $('#calcTss').click ->
         weight = $('#inputWeight').val()
         power = $('#inputPower').val()

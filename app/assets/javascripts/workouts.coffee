@@ -4,3 +4,4 @@
 jQuery ->
     $('#calendar').fullCalendar
         events: '/workouts.json'
+    $('#workout_date').datepicker({dateFormat: 'D, dd M yy'})
