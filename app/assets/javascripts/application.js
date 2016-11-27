@@ -13,11 +13,13 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require jquery-ui
 //= require twitter/bootstrap
 //= require moment 
 //= require fullcalendar
-//= require turbolinks
+
 //= require highcharts/highcharts
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
+//= require cocoon
 //= require_tree .

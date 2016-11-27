@@ -1,20 +1,31 @@
-<%= simple_form_for(@periodization_cycle) do |f| %>
-  <%= f.error_notification %>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-body">
+              <%= simple_form_for @periodization_cycle,
+              html: { class: 'form-horizontal' },
+              wrapper: :horizontal_form do |f| %>
 
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :kind %>
-    <%= f.input :goal_ctl_bike %>
-    <%= f.input :goal_ctl_run %>
-    <%= f.input :goal_ctl_swim %>
-    <%= f.input :year_position %>
-    <%= f.association :periodization_year %>
-    <%= f.simple_fields_for :periodization_weeks do |f| %>
-      <%= f.input :title %>
-    <% end %>
-  </div>
+              <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+              <%= f.input :title %>
+              <%= f.input :kind %>
+              <%= f.input :goal_ctl_bike %>
+              <%= f.input :goal_ctl_run %>
+              <%= f.input :goal_ctl_swim %>
+              <%= f.input :year_position %>
+              <%= f.association :periodization_year %>
+              <div id='periodization_weeks'>
+                <%= f.simple_fields_for :periodization_weeks do |p| %>
+                  <%= render 'periodization_week_fields', :f => p %>
+                <% end %>
+                <div class='links'>
+                  <%= link_to_add_association 'add task', f, :periodization_weeks %>
+                </div>
+              </div>
+              <%= f.button :submit, "Add test", class: "btn btn-success btn-lg"%>
+              <% end %>
+            </div>
+        </div>
+    </div>
+</div>
