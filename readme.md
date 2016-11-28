@@ -14,4 +14,4 @@ You can set well-known metrics and a periodized annual plan will be generated.
 * bin/rails server to start the web application
 
 ## License
-TriPlanr is licensed under the MIT license. (http://opensource.org/license/MIT)
+TriPlanr is licensed under the MIT license. (http://opensource.org/licenses/MIT)
