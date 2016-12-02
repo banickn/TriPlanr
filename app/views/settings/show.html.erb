@@ -2,15 +2,15 @@
 
 <h1>Settings</h1>
 <hr />
-<p>
-  <strong>Season start:</strong>
-  <%= @setting.season_start %>
+  <strong>FTP:</strong>
+  <%= @setting.ftp %>
 </p>
 
 <p>
-  <strong>Season end:</strong>
-  <%= @setting.season_end %>
+  <strong>Weight:</strong>
+  <%= @setting.weight %>
 </p>
+
 
 <%= link_to 'Edit', edit_setting_path(@setting) %> |
 <%= link_to 'Back', settings_path %>

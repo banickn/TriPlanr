@@ -7,7 +7,11 @@
                 wrapper: :horizontal_form do |f| %>
 
                 <%= f.error_notification %>
-
+                <%= f.input :ftp %>
+                <%= f.input :weight %>
+                <%= f.input :start_ctl_swim %>
+                <%= f.input :start_ctl_bike %>
+                <%= f.input :start_ctl_run %>
                 <%= f.button :submit, "Change settings", class: "btn btn-success btn-lg"%>
                 <% end %>
             </div>
