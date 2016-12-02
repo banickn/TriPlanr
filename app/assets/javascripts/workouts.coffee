@@ -4,4 +4,9 @@
 jQuery ->
     $('#calendar').fullCalendar
         events: '/workouts.json'
+        firstDay: 1
+        weekNumbers: true
+        height: 650
+        eventColor: "#A5A5A5"
+        eventTextColor: "#000000"
     $('#workout_date').datepicker({dateFormat: 'D, dd M yy'})

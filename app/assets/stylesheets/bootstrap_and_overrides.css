@@ -11,6 +11,24 @@
 h1 {
   font-size: 26px;
 }
+.Bike {
+  background-color: #e74c3c !important;
+  border-radius: 0px !important;
+  border-color:#c0392b !important;
+  padding: 5px !important;
+}
+.Swim {
+  background-color: #3498db !important;
+  border-radius: 0px !important;
+  border-color:#c0392b !important;
+  padding: 5px !important;
+}
+.Run {
+  background-color: #2ecc71 !important;
+  border-radius: 0px !important;
+  border-color:#c0392b !important;
+  padding: 5px !important;
+}
 .btn {
         border-radius:0px;
           outline: none !important;
@@ -94,6 +112,7 @@ hr {
   background-color: #434343;
   border-right: 1px solid #e7e7e7;
 }
+
 .side-menu .navbar {
   border: none;
 }
