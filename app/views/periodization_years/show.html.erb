@@ -1,20 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @periodization_year.title %>
-  <br />
-  <%= @seasonDurationWeeks %> Weeks 
-</p>
-<ul>
-    <% @periodization_year.periodization_cycles.each do |cycle| %>
-      <li><%= cycle.title %></li>
-      <ul>
-        <% cycle.periodization_weeks.each do |week| %>
-        <li><%= week.title %></li>
-        <% end %>
-        </ul>
+<h1>Season</h1>
+<hr />
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Week</th>
+      <th>Cycle</th>
+      <th>Bike CTL</th>
+      <th>Run CTL</th>
+      <th>Swim CTL</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @year.periodization_cycles.each do |cycle| %>
+      <% cycle.periodization_weeks.each do |week| %>
+        <tr>
+          <td><%= week.date %></td>
+          <td><%= week.periodization_cycle.title %></td>
+          <td><%= week.kind %></td>
+          <td><%= week.goal_ctl_bike.to_i %></td>
+          <td><%= week.goal_ctl_run.to_i %></td>
+          <td><%= week.goal_ctl_swim.to_i %></td>
+        </tr>
+      <% end %>
     <% end %>
-    </ul>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= high_chart("some_id", @chart) %>
 <%= link_to 'Edit', edit_periodization_year_path(@periodization_year) %> |
 <%= link_to 'Back', periodization_years_path %>

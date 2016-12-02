@@ -1,19 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @year.title %>
-  <br />
-  <%= @seasonDurationWeeks %> Cycles (<%= @year.season_end %>)
-</p>
-<ul>
-  <% @year.periodization_cycles.each do |cycle| %>
-  <li><%= cycle.title %></li>
-  <ul>
-    <% cycle.periodization_weeks.each do |week| %>
-    <li><%= week.title %></li>
-    <% end %>
-  </ul>
-  <% end %>
-</ul>
+<h1>Season</h1>
+<hr />
+<%= @year.title %> (<%= @year.season_end %>) <%= @periodizedBikeRamp %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Week</th>
+      <th>Cycle</th>
+      <th>Bike CTL</th>
+      <th>Run CTL</th>
+      <th>Swim CTL</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% @year.periodization_cycles.each do |cycle| %>
+      <% cycle.periodization_weeks.each do |week| %>
+        <tr>
+          <td><%= week.date %></td>
+          <td><%= week.periodization_cycle.title %></td>
+          <td><%= week.kind %></td>
+          <td><%= week.goal_ctl_bike.to_i %></td>
+          <td><%= week.goal_ctl_run.to_i %></td>
+          <td><%= week.goal_ctl_swim.to_i %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= high_chart("some_id", @chart) %>

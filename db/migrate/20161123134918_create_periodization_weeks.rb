@@ -3,6 +3,7 @@ class CreatePeriodizationWeeks < ActiveRecord::Migration[5.0]
     create_table :periodization_weeks do |t|
       t.string :title
       t.string :kind
+      t.date :date
       t.float :goal_ctl_bike
       t.float :goal_ctl_run
       t.float :goal_ctl_swim
