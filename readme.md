@@ -15,11 +15,11 @@ You can set well-known metrics and a periodized annual plan will be generated.
 
 ## Screenshots
 
-[[https://github.com/banickn/triplanr/master/public/triplanr_goals.png]]
+![goals](https://github.com/banickn/TriPlanr/blob/master/public/triplanr_goals.png)
 
-[[https://github.com/banickn/triplanr/master/public/triplanr_calendar.png]]
+![calendar](https://github.com/banickn/TriPlanr/blob/master/public/triplanr_calendar.png)
 
-[[https://github.com/banickn/triplanr/master/public/triplanr_pmc.png]]
+![pmc](https://github.com/banickn/TriPlanr/blob/master/public/triplanr_pmc.png)
 
 ## License
 TriPlanr is licensed under the MIT license. (http://opensource.org/licenses/MIT)
