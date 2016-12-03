@@ -6,6 +6,7 @@ class PeriodizationYear < ApplicationRecord
         @atpBike = Array.new
         @atpRun = Array.new
         @atpSwim = Array.new
+        @atpComb = Array.new
         @year = PeriodizationYear.last
         @year.periodization_cycles.each do |cycle|
             cycle.periodization_weeks.each do |week|
