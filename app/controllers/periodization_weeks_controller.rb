@@ -1,28 +1,20 @@
 class PeriodizationWeeksController < ApplicationController
   before_action :set_periodization_week, only: [:show, :edit, :update, :destroy]
 
-  # GET /periodization_weeks
-  # GET /periodization_weeks.json
   def index
     @periodization_weeks = PeriodizationWeek.all
   end
 
-  # GET /periodization_weeks/1
-  # GET /periodization_weeks/1.json
   def show
   end
 
-  # GET /periodization_weeks/new
   def new
     @periodization_week = PeriodizationWeek.new
   end
 
-  # GET /periodization_weeks/1/edit
   def edit
   end
 
-  # POST /periodization_weeks
-  # POST /periodization_weeks.json
   def create
     @periodization_week = PeriodizationWeek.new(periodization_week_params)
 
@@ -37,12 +29,11 @@ class PeriodizationWeeksController < ApplicationController
     end
   end
 
-  # PATCH/PUT /periodization_weeks/1
-  # PATCH/PUT /periodization_weeks/1.json
   def update
     respond_to do |format|
       if @periodization_week.update(periodization_week_params)
-        format.html { redirect_to @periodization_week, notice: 'Periodization week was successfully updated.' }
+
+        format.html { redirect_to @periodization_week.periodization_cycle.periodization_year, notice: 'Periodization week was successfully updated.' }
         format.json { render :show, status: :ok, location: @periodization_week }
       else
         format.html { render :edit }
@@ -51,8 +42,6 @@ class PeriodizationWeeksController < ApplicationController
     end
   end
 
-  # DELETE /periodization_weeks/1
-  # DELETE /periodization_weeks/1.json
   def destroy
     @periodization_week.destroy
     respond_to do |format|

@@ -12,6 +12,7 @@
       <th>Bike CTL</th>
       <th>Run CTL</th>
       <th>Swim CTL</th>
+      <th>Options</th>
     </tr>
   </thead>
 
@@ -25,6 +26,7 @@
           <td><%= week.goal_ctl_bike.to_i %></td>
           <td><%= week.goal_ctl_run.to_i %></td>
           <td><%= week.goal_ctl_swim.to_i %></td>
+          <td><%= link_to 'Edit', edit_periodization_week_path(week) %></td>
         </tr>
       <% end %>
     <% end %>
