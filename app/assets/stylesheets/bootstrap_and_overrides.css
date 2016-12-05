@@ -5,11 +5,43 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/sprites
   */
+
+body {
+  background-color: #f6f6f6;
+}
 .glyphicon {
   color: #F54A4A;
 }
 h1 {
   font-size: 26px;
+}
+#title {
+  background-color: #fefefe;
+  margin-left: -26px;
+  width: 105%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 20px;
+}
+.wrk-rect {
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wrk-rect span {
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: .15em;
+}
+.red {
+  background-color: #e64759;
+}
+.green {
+  background-color: #1bc98e;
+}
+.blue {
+  background-color: #3498db;
 }
 .Bike {
   background-color: #e74c3c !important;
@@ -103,13 +135,19 @@ hr {
   padding: 10px;
 }
 .navbar-default {
-  background-color: #363636;
+  background-color: #1e202c;
+
+  /*background-color: #363636;*/
 }
 .side-menu {
   position: fixed;
   width: 300px;
   height: 100%;
-  background-color: #434343;
+    background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #2a2c38 , #303342); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #2a2c38 , #303342); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #2a2c38 , #303342); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #2a2c38 , #303342); /* Standard syntax */
   border-right: 1px solid #e7e7e7;
 }
 
@@ -118,7 +156,7 @@ hr {
 }
 .side-menu .navbar-header {
   width: 100%;
-  border-bottom: 1px solid #5f5f5f;
+  border-bottom: 1px solid #454758;
 }
 .side-menu .navbar-nav .active a {
   background-color: transparent;
@@ -128,13 +166,15 @@ hr {
 .side-menu .navbar-nav li {
   display: block;
   width: 100%;
-  border-bottom: 1px solid #5F5F5F;
+  background-color: #1e202c;
+  border-bottom: 1px solid #454758;
 }
 .side-menu .navbar-nav li a {
   padding: 15px;
 }
 .side-menu .navbar-nav li a:hover, a:active, a:visited {
   color: #c2c2c2;
+  background-color: #212436;
 }
 .side-menu .navbar-nav li a .glyphicon {
   padding-right: 10px;
@@ -314,10 +354,13 @@ hr {
     position: fixed;
     left: -300px;
     width: 300px;
-    top: 43px;
+    top: 83px;
     height: 100%;
+    background: -webkit-linear-gradient(left, #2a2c38 , #303342); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #2a2c38 , #303342); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #2a2c38 , #303342); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #2a2c38 , #303342); /* Standard syntax */
     border-right: 1px solid #e7e7e7;
-    background-color: #f8f8f8;
     -moz-animation: slideout 300ms forwards;
     -o-animation: slideout 300ms forwards;
     -webkit-animation: slideout 300ms forwards;
@@ -410,7 +453,10 @@ hr {
     padding: 18px;
     margin: 0;
     border-radius: 0;
-    background-color: #f3f3f3;
+    background-color: #1e202c;
+  }
+  .navbar-toggle:hover {
+    background-color: #4a4c5a;
   }
   /* Search */
   #search .panel-body .navbar-form {
@@ -423,7 +469,10 @@ hr {
     /* this is probably redundant */
     position: fixed;
     z-index: 3;
-    background-color: #f8f8f8;
+    background: -webkit-linear-gradient(left, #2a2c38 , #303342); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #2a2c38 , #303342); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #2a2c38 , #303342); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #2a2c38 , #303342); /* Standard syntax */
   }
   /* Dropdown tweek */
   #dropdown .panel-body .navbar-nav {

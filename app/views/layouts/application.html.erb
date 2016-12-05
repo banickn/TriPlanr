@@ -27,11 +27,7 @@
 
             <!-- Brand -->
             <div class="brand-name-wrapper">
-             <%= image_tag("triplanr_logo.png", size: "90", class: "logo") %><br>
-                <a class="navbar-brand" href="#">
-                    TriPlanr
-                </a>
-
+             <%= image_tag("triplanr_logo.png", size: "90", class: "logo") %>
             </div>
         </div>
 
@@ -40,7 +36,6 @@
     <!-- Main Menu -->
     <div class="side-menu-container">
         <ul class="nav navbar-nav">
-
             <li><%= link_to(goals_path) do%><span class="glyphicon glyphicon-check"></span> Goals <% end %></li>
             <li><%= link_to(workouts_path) do%><span class="glyphicon glyphicon-calendar"></span> Calendar <% end %></li>
             <li><%= link_to(pmc_path) do%><span class="glyphicon glyphicon-signal"></span> PMC<% end %></li>

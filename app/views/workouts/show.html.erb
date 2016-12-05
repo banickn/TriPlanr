@@ -1,34 +1,50 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Date:</strong>
+<div class="row">
+  <div class="col-md-12" id="title"><h1><%= @workout.title %></h1></div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <strong>Date:</strong>
   <%= @workout.date %>
 </p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @workout.title %>
-</p>
-
 <p>
   <strong>Description:</strong>
   <%= @workout.description %>
 </p>
 
+  </div>
+</div>
+
 <p>
-  <strong>Sport:</strong>
-  <%= @workout.sport %>
+  <div class="col-md-2">
+    <div class="wrk-rect blue">
+    <span>SPORT</span>
+    <h2>
+    <%= @workout.sport.name %>
+    </h2>
+    </div>
+  </div>
+</p>
+<p>
+  <div class="col-md-2">
+    <div class="wrk-rect green">
+    <span>TSS</span>
+    <h2>
+    <%= @workout.tss.to_i %>
+    </h2>
+    </div>
+  </div>
 </p>
 
 <p>
-  <strong>Tss:</strong>
-  <%= @workout.tss %>
+  <div class="col-md-2">
+    <div class="wrk-rect red">
+    <span>DURATION</span>
+    <h2>
+    <%= floatToTime(@workout.duration) %>
+    </h2>
+    </div>
+  </div>
 </p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @workout.duration %>
-</p>
-
+<br>
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
