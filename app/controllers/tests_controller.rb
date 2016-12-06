@@ -2,6 +2,7 @@ class TestsController < ApplicationController
   before_action :set_test, only: [:show, :edit, :update, :destroy]
 
   def index
+    @pageTitle = "Tests"
     @tests = Test.all
     @swimTests = Test.where('sport_id' => 1)
     @bikeTests = Test.where('sport_id' => 2)

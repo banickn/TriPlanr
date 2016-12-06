@@ -2,10 +2,12 @@ class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   def index
+    @pageTitle = "Calendar"
     @workouts = Workout.all
   end
 
   def show
+    @pageTitle = @workout.title
   end
 
   def new

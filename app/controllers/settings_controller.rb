@@ -2,6 +2,7 @@ class SettingsController < ApplicationController
   before_action :set_setting, only: [:show, :edit, :update, :destroy]
 
   def index
+    @pageTitle = "Settings"
     @setting = Setting.find(1)
     render :show
   end

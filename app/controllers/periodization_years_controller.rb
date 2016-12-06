@@ -2,6 +2,7 @@ class PeriodizationYearsController < ApplicationController
   before_action :set_periodization_year, only: [:show, :edit, :update, :destroy]
 
   def index
+    @pageTitle = "Seasons"
     @periodization_years = PeriodizationYear.all
   end
 

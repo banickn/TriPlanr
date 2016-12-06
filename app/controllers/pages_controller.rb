@@ -1,8 +1,10 @@
 class PagesController < ApplicationController
   def index
+    @pageTitle = "TSS"
   end
 
   def pmc
+    @pageTitle = "Performance Managing Chart"
     @p = Pmc.new
     @atlBike = @p.calcPMC(7, "Bike")
     @ctlBike = @p.calcPMC(42, "Bike")
