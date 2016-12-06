@@ -1,21 +1,18 @@
 <div class="row">
-  <div class="col-md-12" id="title"><h1><%= @workout.title %></h1></div>
-</div>
-<div class="panel panel-default">
-  <div class="panel-body">
-      <strong>Date:</strong>
-  <%= @workout.date %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @workout.description %>
-</p>
-
+<div class="col-md-11 col-sm-11 col-xs-11">
+  <div class="sales">
+        <strong>Date:</strong>
+    <%= @workout.date %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= @workout.description %>
+  </p>
   </div>
 </div>
-
-<p>
-  <div class="col-md-2">
+</div>
+<div class="row">
+  <div class="col-md-2 col-sm-5 col-xs-5">
     <div class="wrk-rect blue">
     <span>SPORT</span>
     <h2>
@@ -23,9 +20,8 @@
     </h2>
     </div>
   </div>
-</p>
-<p>
-  <div class="col-md-2">
+
+  <div class="col-md-2 col-sm-5 col-xs-5">
     <div class="wrk-rect green">
     <span>TSS</span>
     <h2>
@@ -33,10 +29,8 @@
     </h2>
     </div>
   </div>
-</p>
 
-<p>
-  <div class="col-md-2">
+  <div class="col-md-2 col-sm-5 col-xs-5">
     <div class="wrk-rect red">
     <span>DURATION</span>
     <h2>
@@ -44,7 +38,8 @@
     </h2>
     </div>
   </div>
-</p>
+
+</div>
 <br>
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
