@@ -18,6 +18,10 @@ body {
 h1 {
   font-size: 26px;
 }
+
+header {
+  margin-bottom: 20px;
+}
 #title {
   background-color: #fefefe;
   margin-left: -26px;
@@ -78,7 +82,7 @@ h1 {
 .justForDemo {
      margin-top:15px;
     }
-    
+
     .pagination>li:first-child>a, .pagination>li:first-child>span {
 
   border-top-left-radius: 0px;
@@ -107,15 +111,15 @@ h1 {
   margin-right: 0;
   margin-left: 0;
 }
-/* 
+/*
     Sometimes the sub menus get too large for the page and prevent the menu from scrolling, limiting functionality
-    A quick fix is to change .side-menu to 
+    A quick fix is to change .side-menu to
 
     -> position:absolute
-    
+
     and uncomment the code below.
-    You also need to uncomment 
-    
+    You also need to uncomment
+
     -> <div class="absolute-wrapper"> </div> in the html file
 
     you also need to tweek the animation. Just uncomment the code in that section
@@ -354,6 +358,8 @@ li,ul{
 .display-table-cell {
     display: table-cell;
     float: none;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
     height: 100%;
 }
 
@@ -634,7 +640,7 @@ header {
     width: 100%;
 }
 .sales .dropdown-menu > a:hover{
-    color: #5584FF;   
+    color: #5584FF;
 }
 .shield-buttons {
     display: none;
@@ -691,10 +697,10 @@ header {
     font-weight: 600;
     padding: 10px 30px;
     position: relative;
-    
+
 }
 .modal{
-    top: 20%; 
+    top: 20%;
 }
 .modal-header .close {
     margin-top: 2px;
@@ -802,7 +808,7 @@ header {
     .user-dashboard .sales button {
         font-size: 11px;
         padding-right: 23px;
-}  
+}
     .user-dashboard .sales h2 {
     font-size: 12px;
 }
@@ -833,7 +839,7 @@ header {
 }
     .user-dashboard .header-rightside .header-top img {
         max-width: 41px !important;
-} 
+}
     .user-dashboard .sales button {
     font-size: 10px;
 }
