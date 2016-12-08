@@ -9,11 +9,18 @@
               <%= f.error_notification %>
 
               <%= f.input :title %>
+              <%= f.input :start_ctl_bike %>
+              <%= f.input :start_ctl_run %>
+              <%= f.input :start_ctl_swim %>
               <%= f.input :goal_ctl_bike %>
               <%= f.input :goal_ctl_run %>
               <%= f.input :goal_ctl_swim %>
               <%= f.input :season_start, as: :string, wrapper: :horizontal_form %>
               <%= f.input :season_end, as: :string, wrapper: :horizontal_form %>
+              <%= f.input :block_ratio, priority: [ "2" ], collection: [ "1", "2", "3"], include_blank: false %>
+              <%= f.input :duration_base, priority: [ "4" ], collection: [ "1", "2", "3","4","5"], include_blank: false %>
+              <%= f.input :duration_build, priority: [ "4" ], collection: [ "1", "2", "3","4","5"], include_blank: false %>
+              <%= f.input :duration_taper, priority: [ "1" ], collection: [ "1", "2"], include_blank: false %>
 
               <%= f.button :submit, "Create season", class: "btn btn-success btn-lg"%>
               <% end %>

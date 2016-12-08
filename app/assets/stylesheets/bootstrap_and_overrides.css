@@ -30,6 +30,60 @@ header {
   border-bottom: 1px solid #c9c9c9;
   margin-bottom: 20px;
 }
+.project {
+    height:auto;
+}
+
+.project{
+    border-color: #dedfe0 #c8c8c8 #c8c8c8;
+    border:1px solid #ddd;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    margin: 15px 0; overflow:hidden;
+}
+
+.project-default {    
+    border-color: #999999;
+    border-top: 10px solid #F54A4A;
+}
+
+
+.project-danger {    border-color: #d9534f; }
+.project-danger .shape{
+    border-color: transparent #d9534f transparent transparent;
+    border-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);
+}
+
+.project-success {  border-color: #5cb85c; }
+.project-success .shape{
+    border-color: transparent #5cb85c transparent transparent;
+    border-color: rgba(255,255,255,0) #5cb85c rgba(255,255,255,0) rgba(255,255,255,0);
+}
+
+.project-primary {  border-color: #428bca; }
+.project-primary .shape{
+    border-color: transparent #428bca transparent transparent;
+    border-color: rgba(255,255,255,0) #428bca rgba(255,255,255,0) rgba(255,255,255,0);
+}
+
+.project-info { border-color: #5bc0de; }
+.project-info .shape{
+    border-color: transparent #5bc0de transparent transparent;
+    border-color: rgba(255,255,255,0) #5bc0de rgba(255,255,255,0) rgba(255,255,255,0);
+}
+
+.project-warning {  border-color: #f0ad4e; }
+.project-warning .shape{
+    border-color: transparent #f0ad4e transparent transparent;
+    border-color: rgba(255,255,255,0) #f0ad4e rgba(255,255,255,0) rgba(255,255,255,0);
+}
+
+.project-content {
+    text-align: center;
+    padding:10px;
+}
+.project-content > h3{
+    font-size: 30px
+}
 .wrk-rect {
   color: #fff;
   border-radius: 5px;

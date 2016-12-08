@@ -1,4 +1,4 @@
-  <strong>FTP:</strong>
+<strong>FTP:</strong>
   <%= @setting.ftp %>
 </p>
 
@@ -7,6 +7,20 @@
   <%= @setting.weight %>
 </p>
 
+<p>
+  <strong>Start CTL swim:</strong>
+  <%= @setting.start_ctl_swim %>
+</p>
+
+<p>
+  <strong>Start CTL bike:</strong>
+  <%= @setting.start_ctl_bike %>
+</p>
+
+<p>
+  <strong>Start CTL run:</strong>
+  <%= @setting.start_ctl_run %>
+</p>
 
 <%= link_to 'Edit', edit_setting_path(@setting) %> |
 <%= link_to 'Back', settings_path %>
