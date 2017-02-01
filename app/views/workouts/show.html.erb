@@ -1,6 +1,6 @@
 <div class="row">
         <strong>Date:</strong>
-    <%= @workout.date %>
+    <%= @workout.date.strftime("%d.%m.%Y") %>
   </p>
   <p>
     <strong>Description:</strong>
@@ -9,34 +9,44 @@
 </div>
 
 <div class="row">
-  <div class="col-md-2 col-sm-5 col-xs-5">
+  <div class="col-md-3 col-sm-5 col-xs-5">
     <div class="wrk-rect blue">
-    <span>SPORT</span>
-    <h2>
+    SPORT
+    <span>
     <%= @workout.sport.name %>
-    </h2>
+    </span>
     </div>
   </div>
 
-  <div class="col-md-2 col-sm-5 col-xs-5">
+  <div class="col-md-3 col-sm-5 col-xs-5">
     <div class="wrk-rect green">
-    <span>TSS</span>
-    <h2>
+    TSS
+    <span>
     <%= @workout.tss.to_i %>
-    </h2>
+    </span>
     </div>
   </div>
 
-  <div class="col-md-2 col-sm-5 col-xs-5">
+  <div class="col-md-3 col-sm-5 col-xs-5">
     <div class="wrk-rect red">
-    <span>DURATION</span>
-    <h2>
+    DURATION
+    <span>
     <%= floatToTime(@workout.duration) %>
-    </h2>
+    </span>
     </div>
   </div>
-
+  <div class="options">
+    <ul>
+      <li class="edit">
+      <%= link_to edit_workout_path(@workout) do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        <% end %>
+      </li>
+      <li class="delete">
+        <%= link_to @workout, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </div>
-<br>
-<%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Back', workouts_path %>

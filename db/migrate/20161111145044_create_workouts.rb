@@ -7,6 +7,8 @@ class CreateWorkouts < ActiveRecord::Migration[5.0]
       t.references :sport, foreign_key: true
       t.float :tss
       t.float :duration
+      t.boolean :finished, default: false
+      t.float :distance
 
       t.timestamps
     end

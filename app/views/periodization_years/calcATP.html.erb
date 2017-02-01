@@ -1,41 +1,41 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-
-  <div class="col-xs-2">
-      <div class="project project-default">
-        <div class="project-content">
-          
-          <p>BIKE GOAL</p>
-          <h3 class="lead">
-          <%= @year.goal_ctl_bike.to_i %>
-          </h3>
-        </div>
-      </div>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect red">
+    BIKE GOAL
+    <span>
+    <%= @year.goal_ctl_bike.to_i %>
+    </span>
+    </div>
   </div>
-  <div class="col-xs-2">
-      <div class="project project-default">
-        <div class="project-content">
-          
-          <p>RUN GOAL</p>
-          <h3 class="lead">
-          <%= @year.goal_ctl_run.to_i %>
-          </h3>
-        </div>
-      </div>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect blue">
+    RUN GOAL
+    <span>
+    <%= @year.goal_ctl_run.to_i %>
+    </span>
+    </div>
   </div>
-  <div class="col-xs-2">
-      <div class="project project-default">
-        <div class="project-content">
-          
-          <p>BIKE GOAL</p>
-          <h3 class="lead">
-          <%= @year.goal_ctl_swim.to_i %>
-          </h3>
-        </div>
-      </div>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect green">
+    SWIM GOAL
+    <span>
+    <%= @year.goal_ctl_swim.to_i %>
+    </span>
+    </div>
+  </div>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect green">
+    PERIOD RATIO
+    <span>
+    <%= @year.block_ratio.to_i %>:1
+    </span>
+    </div>
   </div>
 </div>
+<br>
+
 <table class="table table-striped table-condensed">
   <thead>
     <tr>

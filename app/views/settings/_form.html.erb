@@ -1,20 +1,9 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-1">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <%= simple_form_for @setting,
-                html: { class: 'form-horizontal' },
-                wrapper: :horizontal_form do |f| %>
+<%= simple_form_for @setting,
+    html: { class: 'form-horizontal' },
+    wrapper: :horizontal_form do |f| %>
 
-                <%= f.error_notification %>
-                <%= f.input :ftp %>
-                <%= f.input :weight %>
-                <%= f.input :start_ctl_swim %>
-                <%= f.input :start_ctl_bike %>
-                <%= f.input :start_ctl_run %>
-                <%= f.button :submit, "Change settings", class: "btn btn-success btn-lg"%>
-                <% end %>
-            </div>
-        </div>
-    </div>
-</div>
+    <%= f.error_notification %>
+    <%= f.input :ftp %>
+    <%= f.input :weight %>
+    <%= f.button :submit, "submit", class: "btn btn-success btn-lg"%>
+<% end %>

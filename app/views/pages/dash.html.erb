@@ -1,0 +1,13 @@
+
+<% Workout.all.each do |faq| %>
+<div class="col-md-3 col-sm-5 col-xs-5" id="box">
+    <div class="info-box">
+      <div class="info-box-title">
+        SPORT
+      </div>
+      <div class="info-box-content">
+        <%= faq.sport.name %>
+      </div>
+    </div>
+</div>
+<% end %>

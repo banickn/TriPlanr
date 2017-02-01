@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-<%= @year.block_ratio %>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,7 +22,10 @@
           <td><%= week.goal_ctl_bike.to_i %></td>
           <td><%= week.goal_ctl_run.to_i %></td>
           <td><%= week.goal_ctl_swim.to_i %></td>
-          <td><%= link_to 'Edit', edit_periodization_week_path(week) %></td>
+          <td><%= link_to edit_periodization_week_path(week), :class => 'btn btn-sm btn-primary' do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+          <% end %>
+          </td>
         </tr>
       <% end %>
     <% end %>

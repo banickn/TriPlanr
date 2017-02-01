@@ -1,23 +1,15 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-1">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <%= simple_form_for @test,
-                html: { class: 'form-horizontal' },
-                wrapper: :horizontal_form do |f| %>
+<%= simple_form_for @test,
+    html: { class: 'form-horizontal' },
+    wrapper: :horizontal_form do |f| %>
 
-                <%= f.error_notification %>
-                <%= f.input :date, as: :string, wrapper: :horizontal_form %>
-                <%= f.input :title %>
-                <%= f.input :duration %>
-                <%= f.input :power %>
-                <%= f.input :speed %>
-                <%= f.input :distance %>
-                <%= f.association :sport %>
+    <%= f.error_notification %>
+    <%= f.input :date, as: :string, wrapper: :horizontal_form %>
+    <%= f.input :title %>
+    <%= f.input :duration %>
+    <%= f.input :power %>
+    <%= f.input :speed %>
+    <%= f.input :distance %>
+    <%= f.association :sport %>
 
-                <%= f.button :submit, "Add test", class: "btn btn-success btn-lg"%>
-                <% end %>
-            </div>
-        </div>
-    </div>
-</div>
+    <%= f.button :submit, "submit", class: "btn btn-success btn-lg"%>
+<% end %>

@@ -27,3 +27,15 @@ jQuery ->
             $('#imtss').css('color', '#2ecc71')
         else if (imtss > 300)
             $('#imtss').css('color', '#c0392b')
+
+    $('#calcRunSpeed').click ->
+        speed = $('#inputSpeed').val()
+        distance = $('#inputDistance').val()
+        minSpeed = +speed - 5
+        maxSpeed = +speed + 5
+        for speedRangeInSec in [minSpeed..maxSpeed]
+            speedDistance = (speedRangeInSec / 60) * distance
+
+    $('#box').sortable
+        update: ->
+          alert('updated!')

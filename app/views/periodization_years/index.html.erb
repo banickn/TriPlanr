@@ -1,23 +1,30 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th colspan="4"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @periodization_years.each do |periodization_year| %>
-      <tr>
-        <td><%= periodization_year.title %></td>
-        <td><%= link_to 'Show', periodization_year %></td>
-        <td><%= link_to 'Edit', edit_periodization_year_path(periodization_year) %></td>
-        <td><%= link_to 'Calculate Periodization', calcATP_periodization_year_path(periodization_year) %></td>
-        <td><%= link_to 'Destroy', periodization_year, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= link_to "#{periodization_year.title}", periodization_year %></td>
+      <td><%= link_to calcATP_periodization_year_path(periodization_year), data: { confirm: 'Are you sure?' }, :class => 'btn btn-sm btn-primary' do %>
+        <span class="fa fa-bar-chart"></span>
+        <% end %>
+        <%= link_to edit_periodization_year_path(periodization_year), :class => 'btn btn-sm btn-primary' do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        <% end %>
+        <%= link_to periodization_year, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-sm btn-primary' do %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      </td>
+    </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<%= link_to('New Periodization', new_periodization_year_path, :class => 'btn btn-default btn-lg')  %>
 
-<%= link_to 'New Periodization Year', new_periodization_year_path %>
+

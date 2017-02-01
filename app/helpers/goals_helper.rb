@@ -1,13 +1,13 @@
 module GoalsHelper
-    def priorityIcon priority
+    def priorityColour priority
         if priority == "A"
-            "<div class=\"timeline-icon bg-secondary\">".html_safe
+            "prioA"
         elsif priority == "B"
-            "<div class=\"timeline-icon bg-warning\">".html_safe
+            "prioB"
         elsif priority == "C"
-            "<div class=\"timeline-icon bg-info\">".html_safe
+            "prioC"
         else
-            "<div class=\"timeline-icon bg-success\">".html_safe
+            "prioC"
         end
     end
 end

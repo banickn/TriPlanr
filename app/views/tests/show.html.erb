@@ -1,39 +1,65 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+        <strong>Date:</strong>
+    <%= @test.date %>
+  </p>
+  <p>
+    <strong>Sport:</strong>
+    <%= @test.sport.name %>
+  </p>
+</div>
 
-<p>
-  <strong>Date:</strong>
-  <%= @test.date %>
-</p>
+<div class="row">
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect blue">
+    DURATION
+    <span>
+    <%= floatToTime(@test.duration) %>
+    </span>
+    </div>
+  </div>
+<% if @test.sport.name == "Bike"%>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect green">
+    POWER
+    <span>
+    <%= @test.power %>
+    </span>
+    </div>
+  </div>
+<% end %>
+<% if @test.sport.name == "Swim" || @test.sport.name == "Run"%>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect red">
+    Distance
+    <span>
+    <%= floatToTime(@test.duration) %>
+    </span>
+    </div>
+  </div>
+<% end %>
+<% if @test.sport.name == "Run"%>
+  <div class="col-md-3 col-sm-5 col-xs-5">
+    <div class="wrk-rect green">
+    SPEED
+    <span>
+    <%= @test.speed %>
+    </span>
+    </div>
+  </div>
+<% end %>
+  <div class="options">
+    <ul>
+      <li class="edit">
+      <%= link_to edit_test_path(@test) do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+        <% end %>
+      </li>
+      <li class="delete">
+        <%= link_to @test, method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      </li>
 
-<p>
-  <strong>Title:</strong>
-  <%= @test.title %>
-</p>
-
-<p>
-  <strong>Duration:</strong>
-  <%= @test.duration %>
-</p>
-
-<p>
-  <strong>Power:</strong>
-  <%= @test.power %>
-</p>
-
-<p>
-  <strong>Speed:</strong>
-  <%= @test.speed %>
-</p>
-
-<p>
-  <strong>Distance:</strong>
-  <%= @test.distance %>
-</p>
-
-<p>
-  <strong>Sport:</strong>
-  <%= @test.sport %>
-</p>
-
-<%= link_to 'Edit', edit_test_path(@test) %> |
-<%= link_to 'Back', tests_path %>
+    </ul>
+  </div>
+</div>

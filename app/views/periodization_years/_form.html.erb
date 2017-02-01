@@ -1,30 +1,22 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-1">
-        <div class="panel panel-default">
-            <div class="panel-body">
-              <%= simple_form_for @periodization_year,
-              html: { class: 'form-horizontal' },
-              wrapper: :horizontal_form do |f| %>
+<%= simple_form_for @periodization_year,
+    html: { class: 'form-horizontal' },
+    wrapper: :horizontal_form do |f| %>
 
-              <%= f.error_notification %>
+    <%= f.error_notification %>
 
-              <%= f.input :title %>
-              <%= f.input :start_ctl_bike %>
-              <%= f.input :start_ctl_run %>
-              <%= f.input :start_ctl_swim %>
-              <%= f.input :goal_ctl_bike %>
-              <%= f.input :goal_ctl_run %>
-              <%= f.input :goal_ctl_swim %>
-              <%= f.input :season_start, as: :string, wrapper: :horizontal_form %>
-              <%= f.input :season_end, as: :string, wrapper: :horizontal_form %>
-              <%= f.input :block_ratio, priority: [ "2" ], collection: [ "1", "2", "3"], include_blank: false %>
-              <%= f.input :duration_base, priority: [ "4" ], collection: [ "1", "2", "3","4","5"], include_blank: false %>
-              <%= f.input :duration_build, priority: [ "4" ], collection: [ "1", "2", "3","4","5"], include_blank: false %>
-              <%= f.input :duration_taper, priority: [ "1" ], collection: [ "1", "2"], include_blank: false %>
+    <%= f.input :title %>
+    <%= f.input :start_ctl_bike %>
+    <%= f.input :start_ctl_run %>
+    <%= f.input :start_ctl_swim %>
+    <%= f.input :goal_ctl_bike %>
+    <%= f.input :goal_ctl_run %>
+    <%= f.input :goal_ctl_swim %>
+    <%= f.input :season_start, as: :string, wrapper: :horizontal_form %>
+    <%= f.input :season_end, as: :string, wrapper: :horizontal_form %>
+    <%= f.input :block_ratio, priority: [ "2" ], collection: [ "1", "2", "3"], include_blank: false %>
+    <%= f.input :duration_base, priority: [ "4" ], collection: [ "1", "2", "3","4","5"], include_blank: false %>
+    <%= f.input :duration_build, priority: [ "4" ], collection: [ "1", "2", "3","4","5"], include_blank: false %>
+    <%= f.input :duration_taper, priority: [ "1" ], collection: [ "1", "2"], include_blank: false %>
 
-              <%= f.button :submit, "Create season", class: "btn btn-success btn-lg"%>
-              <% end %>
-            </div>
-        </div>
-    </div>
-</div>
+    <%= f.button :submit, "submit", class: "btn btn-success btn-lg"%>
+<% end %>

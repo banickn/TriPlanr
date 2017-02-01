@@ -1,22 +1,15 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-1">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <%= simple_form_for @workout,
-                html: { class: 'form-horizontal' },
-                wrapper: :horizontal_form do |f| %>
+<%= simple_form_for @workout,
+html: { class: 'form-horizontal' },
+wrapper: :horizontal_form do |f| %>
 
-                <%= f.error_notification %>
-                <%= f.input :date, as: :string, wrapper: :horizontal_form %>
-                <%= f.input :title %>
-                <%= f.input :description %>
-                <%= f.association :sport %>
-                <%= f.input :tss %>
-                <%= f.input :duration %>
-
-                <%= f.button :submit, "Add workout", class: "btn btn-success btn-lg"%>
-                <% end %>
-            </div>
-        </div>
-    </div>
-</div>
+    <%= f.error_notification %>
+    <%= f.input :date, as: :string, wrapper: :horizontal_form %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.association :sport %>
+    <%= f.input :tss %>
+    <%= f.input :duration %>
+    <%= f.input :finished, wrapper: :horizontal_form %>
+    <%= f.input :distance %>
+    <%= f.button :submit, "Add workout", class: "btn btn-success btn-lg"%>
+<% end %>

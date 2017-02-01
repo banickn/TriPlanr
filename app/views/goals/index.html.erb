@@ -1,33 +1,34 @@
-<div class="timeline-centered">
+<ul class="event-list">
     <% @goals.each do |goal| %>
+<li>
+                <time datetime="<%= goal.date %>" class="<%= priorityColour(goal.priority) %>">
+                    <span class="day"><%= goal.date.strftime("%d")  %></span>
+                    <span class="month"><%= goal.date.strftime("%b") %></span>
+                    <span class="year"><%= goal.date.year %></span>
+                    <span class="time">ALL DAY</span>
+                </time>
 
-     <article class="timeline-entry">
-
-            <div class="timeline-entry-inner">
-
-                <%= priorityIcon(goal.priority) %>
-                    <i class="entypo-feather"></i>
+                <div class="info">
+                    <h2 class="title"><%= goal.title %></h2>
+                    <p class="desc">(<%= (goal.date - Date.today).to_i %> days to go)</p>
                 </div>
+                <div class="social">
+                    <ul>
+                        <li class="edit">
+                            <%= link_to edit_goal_path(goal) do %>
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            <% end %>
+                        </li>
+                        <li class="delete">
+                            <%= link_to goal, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                                <span class="glyphicon glyphicon-trash"></span>
+                            <% end %>
+                        </li>
 
-                <div class="timeline-label">
-                    <h2><%= goal.title %> <span>(<%= (goal.date - Date.today).to_i %> days to go)</span></h2>
-                    <p><%= goal.date %> <%= goal.description %></p>
+                    </ul>
                 </div>
-            </div>
-        </article>
-    <% end %>
+            </li>
+<% end %>
 
-        <article class="timeline-entry begin">
-
-            <div class="timeline-entry-inner">
-
-                <div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
-                    <i class="entypo-flight"></i> <%= link_to '+', new_goal_path %>
-                </div>
-
-            </div>
-
-        </article>
-
-</div>
-
+</ul>
+<%= link_to('Add goal', new_goal_path, :class => 'btn btn-default btn-lg')  %>

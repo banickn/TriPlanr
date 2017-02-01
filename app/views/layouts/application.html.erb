@@ -23,7 +23,6 @@
                         <li><%= link_to(tsscalc_path) do%><i class="fa fa-calculator" aria-hidden="true"></i> <span class="hidden-xs hidden-sm"> TSS</span><% end %></li>
                         <li><%= link_to(tests_path) do%><i class="fa fa-file-text" aria-hidden="true"></i> <span class="hidden-xs hidden-sm"> Tests</span> <% end %> </li>
                         <li><%= link_to(periodization_years_path) do%><i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="hidden-xs hidden-sm">ATP</span><% end %></li>
-                        <li><%= link_to(settings_path) do %><i class="fa fa-cog" aria-hidden="true"></i> <span class="hidden-xs hidden-sm"> Settings</span><% end %></li>
                     </ul>
                 </div>
             </div>
@@ -67,7 +66,7 @@
                                                     </p>
                                                     <div class="divider">
                                                     </div>
-                                                    <a href="#" class="view btn-sm active">View Profile</a>
+                                                    <%= link_to(settings_path) do %><i class="fa fa-cog" aria-hidden="true"></i> <span class="hidden-xs hidden-sm"> Settings</span><% end %>
                                                 </div>
                                             </li>
                                         </ul>
