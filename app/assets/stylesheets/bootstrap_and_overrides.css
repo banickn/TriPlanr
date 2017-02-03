@@ -199,7 +199,7 @@ header {
         background-color: #7f8c8d !important;
     }
     .twitter:hover a {
-        color: #FFFFFF) !important;
+        color: #FFFFFF !important;
         background-color: rgb(79, 213, 248) !important;
     }
     .delete:hover a {
@@ -412,21 +412,20 @@ header {
   padding: 5px !important;
 }
 .btn {
-        border-radius:0px;
-          outline: none !important;
-        }
-        .open>.dropdown-menu {
-              border-radius: 0px;
-            }
-            .btn:hover {
+  border-radius:0px;
+  outline: none !important;
+}
+.open>.dropdown-menu {
+  border-radius: 0px;
+}
+.btn:hover {
   border-color: #787878;
 }
 .justForDemo {
-     margin-top:15px;
-    }
+  margin-top:15px;
+}
 
-    .pagination>li:first-child>a, .pagination>li:first-child>span {
-
+.pagination>li:first-child>a, .pagination>li:first-child>span {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
@@ -445,7 +444,7 @@ header {
 
 .btn-group-vertical>.btn:first-child:not(:last-child) {
     border-top-right-radius: 0px;
-    }
+}
 :focus {
   outline: none;
 }
@@ -489,11 +488,11 @@ hr {
 
 
 /*Login Signup Page*/
-a:focus,a:hover,a{
+a:focus,a:hover,a {
     outline:none;
     text-decoration: none;
 }
-li,ul{
+li,ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -1199,7 +1198,7 @@ header {
     width: 100%;
 }
 }
-
+}
 
 
 
